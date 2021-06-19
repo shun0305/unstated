@@ -1,13 +1,13 @@
 import React from "react";
-import Display from "./components/Display";
-import Button from "./components/Button";
+import propsContainer from "./props-container";
+
+import Form from "./Form";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Display />
-      <Button />
-    </div>
+    <propsContainer.Provider initialState={"タイポ"}>
+      <Form />
+    </propsContainer.Provider>
   );
 };
 
